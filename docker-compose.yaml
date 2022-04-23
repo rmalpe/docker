@@ -1,0 +1,19 @@
+services:
+    opsdroid:
+      build: 
+        context: ./opsdroid
+        dockerfile: Dockerfile
+      image: opsdroid:1.0.0
+
+      ports:
+        - "8080:8080"
+      
+
+    apiServer:
+      build:
+        context: ./apiServer
+        dockerfile: Dockerfile
+      image: apiserver:1.0.0
+
+      ports:
+        - "8000:8000"
